@@ -27,9 +27,10 @@ docker run --rm -p 8000:8000 voc-detector
 - **ტერმინალიდან:**
   ```bash
   curl http://localhost:8000/health
-  curl -D - -F "file=@photo.jpg" http://localhost:8000/predict -o out.png          # სურათი ჩარჩოებით
-  curl -F "file=@photo.jpg" "http://localhost:8000/predict/json?conf=0.5"          # ჩარჩოები JSON-ად
+  curl -D - -F "file=@/PATH/TO/photo.jpg" http://localhost:8000/predict -o out.png          # სურათი ჩარჩოებით
+  curl -F "file=@PATH/TO/photo.jpg" "http://localhost:8000/predict/json?conf=0.5"          # ჩარჩოები JSON-ად
   ```
+- ფოტოს, რომელსაც გადასცმემთ უნდა მოიცავდეს მინიმუმ ერთ ობიექტს შემდეგიდან: თვითმფრინავი,ველოსიპედი,ჩიტი,ნავი,ბოთლი,ავტობუსი,მანქანა,კატა,სკამი,ძროხა,სასადილო მაგიდა, ძაღლი, ცხენი,მოტოციკლი,ადამიანი, მცენარე, ტახტი,მატარებელი,ტელევიზორი
 
 #### თუ ფოტოზე ცხადად არ არის გამოკვეთილი გამოსახულება, conf ის არგუმენტი გადაეცით უფრო დაბალი - `?conf=` endpoint-ის შემდეგ
 
