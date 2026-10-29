@@ -53,11 +53,6 @@ for r in rows:
         f"{r['map50_95'] - base['map50_95']:>+8.3f}{r['map50']:>8.3f}"
     )
 
-with open("results.csv", "w", newline="") as f:
-    writer = csv.DictWriter(f, fieldnames=rows[0].keys())
-    writer.writeheader()
-    writer.writerows(rows)
-
 names = [r["model"] for r in rows]
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(11, 4))
 ax1.bar(names, [r["ms_per_image"] for r in rows])
@@ -68,4 +63,4 @@ for ax in (ax1, ax2):
     ax.tick_params(axis="x", rotation=20)
 plt.tight_layout()
 plt.savefig("comparison.png", dpi=150)
-print("\nsaved results.csv and comparison.png")
+
