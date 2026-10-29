@@ -1,0 +1,9 @@
+.venv
+__pycache__
+*.png
+*.jpg
+*.pt
+*.ipynb
+benchmark_model.py
+best_fp32_640.onnx
+best_int8_640.onnx
