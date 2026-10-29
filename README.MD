@@ -129,7 +129,7 @@ Notebook `notebooks/yolo26_voc.ipynb`.
 
 Each run changes **one** thing relative to its reference run. Before every architectural or trainable-parameter change, an **overfit-32 sanity check** was run: train and validate on the same 32 images, which must reach mAP50 ≥ 0.9, confirming the setup can learn at all.
 
-### YOLO26 runs (val, Ultralytics evaluator)
+### [YOLO26 runs (val, Ultralytics evaluator)](https://forge.coreweave.com/wandb/ldavi22-free-university-of-tbilisi-/voc-frcnn/reports/YOLO26-on-VOC2012--VmlldzoxODIwMjc5NA?accessToken=etc61diti6gz2k7l7qvgqaajixhhn4d1de3kigji5rsob81cu7qoxevk0xmssfeq)
 
 | Run | Change                                                 | val mAP50-95 | val mAP50 | Δ vs R0    | train−val gap | train s/epoch |
 |-----|--------------------------------------------------------|--------------|-----------|------------|---------------|---------------|
@@ -144,7 +144,7 @@ Each run changes **one** thing relative to its reference run. Before every archi
 | R8  | R1 with SGD, lr0 0.01                                  | 0.597        | 0.783     | −0.021     | 0.131         | 82            |
 | R9  | R1 with YOLO26s                                        | 0.623        | 0.806     | +0.004     | 0.146         | 140           |
 
-### Faster R-CNN MobileNetV3-FPN, v1 (Kaggle, input 800–1333 px)
+### [Faster R-CNN MobileNetV3-FPN, v1 (Kaggle, input 800–1333 px)](https://forge.coreweave.com/wandb/ldavi22-free-university-of-tbilisi-/voc-frcnn/reports/Faster-R-CNN-on-VOC2012--VmlldzoxODIwMjg0Mg?accessToken=1ougg9fdofa8n8dhdhxcgdhuhlpdqnu2u81rw4oqf9ehiet7smggshausgu68bev)
 
 | Run | Change                                                               | Trainable params | val mAP50-95 | val mAP50 | train−val gap | train s/epoch |
 |-----|----------------------------------------------------------------------|------------------|--------------|-----------|---------------|---------------|
@@ -154,7 +154,7 @@ Each run changes **one** thing relative to its reference run. Before every archi
 | R4  | R3 with backbone fully frozen                                        | 16.08 M          | **0.540**    | **0.790** | 0.127         | 348           |
 | R5  | R3 with whole backbone trainable                                     | 19.03 M          | 0.525        | 0.771     | 0.212         | 689           |
 
-### Faster R-CNN MobileNetV3-FPN, v2 (Colab, input 512–853 px)
+### [Faster R-CNN MobileNetV3-FPN, v2 (Colab, input 512–853 px)](https://forge.coreweave.com/wandb/ldavi22-free-university-of-tbilisi-/voc-frcnn/reports/Faster-R-CNN-on-VOC2012--VmlldzoxODIwMjg0Mg?accessToken=1ougg9fdofa8n8dhdhxcgdhuhlpdqnu2u81rw4oqf9ehiet7smggshausgu68bev)
 
 | Run | Frozen                  | Classifier init | Trainable params | val mAP50-95 | val mAP50 | train−val gap | train s/epoch |
 |-----|-------------------------|-----------------|------------------|--------------|-----------|---------------|---------------|
